@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="container container-style p-0">
+        <div class="row">
+            <div class="col-12 p-0 catagory-header">
+                <div class="row">
+                    <div class="col-6 header-section-txt">
+                        Section
+                    </div>
+                    <div class="col-6 add-catagory-header">
+                        <button class="float-right add-catagory-btn" [disabled]="isDisabled" type="button"
+                            (click)="onAdd()">
+                            + Add Category
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 p-0 table-header">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td width="15%"></td>
+                                    <td width="35%">Category</td>
+                                    <td width="40%">SEQ.</td>
+                                    <td width="10%"></td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div cdkDropList class="category-list" (cdkDropListDropped)="drop($event)">
+            <div class="category-box" *ngFor="let item of items" cdkDrag>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td width="15%" class="text-center catagory-row"><img class="group-11070"
+                                    src="/assets/catagories/group-11070/group-11070.svg" alt="Knob"></td>
+
+                                    
+                            <td width="35%" *ngIf="item.edit"><input placeholder="Category Name"
+                                    class="catagory-input-field" autofocus #catagoryName type="text" name="categoryName"
+                                    (keyup.enter)="onAddName(item)"></td>
+                            <td width="35%" *ngIf="!item.edit">{{ item.name }}</td>
+
+                            <td width="40%">
+                                <div class="rectangle-13414">{{item.seq}}</div>
+                            </td>
+
+                            <td width="10%" *ngIf="!item.edit" class="text-center" (click)="onDelete(item)"><img
+                                    class="group-15587" src="/assets/catagories/group-15587/group-15587.svg"
+                                    alt="Delete"></td>
+                            <td width="10%" *ngIf="item.edit" class="text-center save-btn" (click)="onAddName(item)">
+                                SAVE</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

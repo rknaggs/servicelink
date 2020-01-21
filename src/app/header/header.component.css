@@ -1,0 +1,71 @@
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.navbar-toggler:focus, .navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-custom {
+    background-color: #0a3645;
+    padding: 0;
+}
+
+.nav-item {
+    width: 95px;
+    height: 40px;
+}
+
+.nav-item:hover a {
+    background-color: #4a636c;
+    color: white !important;
+    font-weight: bold !important;
+}
+
+.nav-item-right a {
+    width: 100%;
+    margin-right: 20px;
+}
+
+.nav-link {
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #90a3aa !important;
+    font-weight: normal !important;
+    height: 40px;
+}
+
+.navbar-light .navbar-toggler-icon {
+    margin-left: 5px;
+    background-image: url("/assets/header/union-739/union-739.svg");
+}
+
+.group-1 {
+    width: 26px;
+    height: 26px;
+}
+
+.path-5031 {
+    width: 9px;
+    height: 5.3px;
+}
+
+.login-name {
+    padding: 5px 10px 0 40px;
+    font-weight: normal;
+    color: white;
+}
+
+.x-btn-offset {
+    padding-right: 70px;
+}
+
+@media only screen and (max-width: 375px) {
+    .navbar-custom {
+        min-height: 54px;
+    }
+}
